@@ -1,0 +1,25 @@
+[package]
+name = "leetcode"
+version = "0.1.0"
+edition = "2021"
+default-run = "directions"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[[bin]]
+name = "directions"
+path = "src/main.rs"
+
+[[bin]]
+name = "1_two_sum"
+path = "1_two_sum/main.rs"
+
+[[bin]]
+name = "2_add_two_numbers"
+path = "2_add_two_numbers/main.rs"
+
+[[bin]]
+name = "3_longest_substring_without_repeating_characters"
+path = "3_longest_substring_without_repeating_characters/main.rs"
