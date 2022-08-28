@@ -1,6 +1,9 @@
 use std::collections::HashMap;
 use std::time::Instant;
 
+// problem
+// https://leetcode.com/problems/two-sum/
+
 // my original code
 pub fn my_two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
 
