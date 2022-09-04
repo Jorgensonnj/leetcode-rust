@@ -23,3 +23,7 @@ path = "2_add_two_numbers/main.rs"
 [[bin]]
 name = "3_longest_substring_without_repeating_characters"
 path = "3_longest_substring_without_repeating_characters/main.rs"
+
+[[bin]]
+name = "4_median_of_two_sorted_arrays"
+path = "4_median_of_two_sorted_arrays/main.rs"
