@@ -39,7 +39,7 @@ pub fn my_find_median_sorted_arrays(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
 
         let small_left = if small_mid != 0 {
             match small.get(small_mid - 1) {
-                Some(v) if  v >= &0 => f64::from(*v),
+                Some(v) if v >= &0 => f64::from(*v),
                 _ => f64::NEG_INFINITY,
 
             }
@@ -55,7 +55,7 @@ pub fn my_find_median_sorted_arrays(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
 
         let big_left = if big_mid != 0 {
             match big.get(big_mid - 1) {
-                Some(v) if  v >= &0 => f64::from(*v),
+                Some(v) if v >= &0 => f64::from(*v),
                 _ => f64::NEG_INFINITY,
 
             }
