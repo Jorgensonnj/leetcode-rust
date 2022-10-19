@@ -31,3 +31,11 @@ path = "4_median_of_two_sorted_arrays/main.rs"
 [[bin]]
 name = "5_longest_palindromic_substring"
 path = "5_longest_palindromic_substring/main.rs"
+
+[[bin]]
+name = "6_zigzag_conversion"
+path = "6_zigzag_conversion/main.rs"
+
+[[bin]]
+name = "7_reverse_integer"
+path = "7_reverse_integer/main.rs"
