@@ -5,16 +5,23 @@ use std::time::Instant;
 
 // my original code
 pub fn my_reverse(x: i32) -> i32 {
-    let abs = x.abs();
     let signed = if x < 0 { -1 } else { 1 };
-    return recusion(abs, 0) * signed;
+    return recusion(x.abs(), 0) * signed;
 }
 
 pub fn recusion(x: i32, reverse: i32) -> i32 {
     match x {
         x if x < 0 => 0,
         x if x == 0 => reverse,
-        _ => recusion( x / 10, ( reverse * 10 ) + ( x % 10 ) )
+        _ => {
+            recusion( x / 10, match reverse.checked_mul(10) {
+                None      => 0,
+                Some(sum) => match sum.checked_add( x % 10 ) {
+                    None      => 0,
+                    Some(sum) => sum
+                }
+            })
+        }
     }
 }
 
@@ -44,6 +51,12 @@ fn main() {
 
     // test 2
     let num1 = -123;
+
+    // test 3
+    //let num1 = 120;
+
+    // test 4
+    //let num1 = 1534236469;
 
     let my_time = Instant::now();
     let my_result = my_reverse( num1 );
