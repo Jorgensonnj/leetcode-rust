@@ -13,6 +13,8 @@ Avaliable binaries:
     - 3_longest_substring_without_repeating_characters
     - 4_median_of_two_sorted_arrays
     - 5_longest_palindromic_substring
+    - 6_zigzag_conversion
+    - 7_reverse_integer
 ";
 
     println!("{}", directions);

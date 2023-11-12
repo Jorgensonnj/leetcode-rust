@@ -6,50 +6,50 @@ use std::time::Instant;
 // my original code
 pub fn my_reverse(x: i32) -> i32 {
     let abs = x.abs();
-    let one = if x < 0 { -1 } else { 1 };
-    return recusion(abs, 1) * one;
+    let signed = if x < 0 { -1 } else { 1 };
+    return recusion(abs, 0) * signed;
 }
 
-pub fn recusion(x: i32, factor: i32) -> i32 {
-    if x == 0 {
-        return 0;
-    } else {
-        let mod_num = x % 10;
-        println!("mod_num: {}, x: {}, factor: {}", mod_num, x, factor);
-        return mod_num + recusion(x / 10, factor * 10) * factor;
+pub fn recusion(x: i32, reverse: i32) -> i32 {
+    match x {
+        x if x < 0 => 0,
+        x if x == 0 => reverse,
+        _ => recusion( x / 10, ( reverse * 10 ) + ( x % 10 ) )
     }
 }
 
-
-
 // someone else's code
-//pub fn other_reverse(x: i32) -> i32 {
-//}
+pub fn other_reverse(x: i32) -> i32 {
+    let mut res: i32 = 0;
+    let mut cur: i32 = x;
+    while cur != 0 {
+        match res.checked_mul(10) {
+            None => return 0,
+            Some(tmp) => match tmp.checked_add(cur % 10) {
+                None => return 0,
+                Some(fine) => {
+                    res = fine;
+                }
+            }
+        }
+        cur = cur / 10;
+    }
+    res
+}
 
 fn main() {
 
     // test 1
-    let num1 = 123;
-    //let num2 = 123;
-    //let s2 = s1.clone();
+    //let num1 = 123;
 
     // test 2
-    //let s1 = "semjhjlritnjgapzrakcqahaqetwllrldktufvdgkfusniv".to_string();
-    //let s2 = s1.clone();
-
-    // test 3
-    //let s1 = "a".to_string();
-    //let s2 = s1.clone();
-
-    // test 3
-    //let s1 = "bb".to_string();
-    //let s2 = s1.clone();
+    let num1 = -123;
 
     let my_time = Instant::now();
     let my_result = my_reverse( num1 );
     println!("Result: {:?}, Time: {:?}", my_result, my_time.elapsed());
 
-    //let other_time = Instant::now();
-    //let other_result = other_reverse( num );
-    //println!("Result: {:?}, Time: {:?}", other_result, other_time.elapsed());
+    let other_time = Instant::now();
+    let other_result = other_reverse( num1 );
+    println!("Result: {:?}, Time: {:?}", other_result, other_time.elapsed());
 }
