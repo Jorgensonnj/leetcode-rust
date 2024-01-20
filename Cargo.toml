@@ -39,3 +39,7 @@ path = "6_zigzag_conversion/main.rs"
 [[bin]]
 name = "7_reverse_integer"
 path = "7_reverse_integer/main.rs"
+
+[[bin]]
+name = "8_string_to_integer_atoi"
+path = "8_string_to_integer_atoi/main.rs"
