@@ -46,23 +46,21 @@ pub fn other_reverse(x: i32) -> i32 {
 
 fn main() {
 
-    // test 1
-    //let num1 = 123;
+    let tests = vec![
+        123,
+        -123,
+        120,
+        1534236469,
+    ];
 
-    // test 2
-    let num1 = -123;
+    for ( index, test ) in tests.iter().enumerate() {
 
-    // test 3
-    //let num1 = 120;
+        let my_time = Instant::now();
+        let my_result = my_reverse( test.clone() );
+        println!("Test: {}, Result: {:?}, Time: {:?}", index, my_result, my_time.elapsed());
 
-    // test 4
-    //let num1 = 1534236469;
-
-    let my_time = Instant::now();
-    let my_result = my_reverse( num1 );
-    println!("Result: {:?}, Time: {:?}", my_result, my_time.elapsed());
-
-    let other_time = Instant::now();
-    let other_result = other_reverse( num1 );
-    println!("Result: {:?}, Time: {:?}", other_result, other_time.elapsed());
+        let other_time = Instant::now();
+        let other_result = other_reverse( test.clone() );
+        println!("Test: {}, Result: {:?}, Time: {:?}", index, other_result, other_time.elapsed());
+    }
 }

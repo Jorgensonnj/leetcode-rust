@@ -84,30 +84,21 @@ pub fn other_conversion<S>(s: S, num_rows: i32) -> String where S: AsRef<str> {
 
 fn main() {
 
-    // test 1
-    //let s1 = "PAYPALISHIRING".to_string();
-    //let s2 = s1.clone();
-    //let num = 4;
+    let tests = vec![
+        ("PAYPALISHIRING".to_string(), 4),
+        ("PAYPALISHIRING".to_string(), 3),
+        ("bb".to_string(),             2),
+        ("PAYPALISHIRING".to_string(), 6),
+    ];
 
-    // test 2
-    //let s1 = "PAYPALISHIRING".to_string();
-    //let num = 3;
-    //let s2 = s1.clone();
+    for ( index, test ) in tests.iter().enumerate() {
 
-    // test 3
-    let s1 = "PAYPALISHIRING".to_string();
-    let s2 = s1.clone();
-    let num = 6;
+        let my_time = Instant::now();
+        let my_result = my_conversion( test.0.clone(), test.1 );
+        println!("Test: {}, Result: {:?}, Time: {:?}", index, my_result, my_time.elapsed());
 
-    // test 3
-    //let s1 = "bb".to_string();
-    //let s2 = s1.clone();
-
-    let my_time = Instant::now();
-    let my_result = my_conversion( s1, num );
-    println!("Result: {:?}, Time: {:?}", my_result, my_time.elapsed());
-
-    let other_time = Instant::now();
-    let other_result = other_conversion( s2, num );
-    println!("Result: {:?}, Time: {:?}", other_result, other_time.elapsed());
+        let other_time = Instant::now();
+        let other_result = other_conversion( test.0.clone(), test.1 );
+        println!("Test: {}, Result: {:?}, Time: {:?}", index, other_result, other_time.elapsed());
+    }
 }

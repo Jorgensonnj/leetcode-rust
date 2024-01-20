@@ -64,36 +64,23 @@ pub fn other_length_of_longest_substring(s: String) -> i32 {
 
 fn main() {
 
-    // test 1
-    // expected: 3
-    let s1 = "pwwkew".to_string();
-    let s2 = s1.clone();
 
-    // test 2
-    // expected: 1
-    //let s1 = "bbbbbb".to_string();
-    //let s2 = s1.clone();
+    let tests = vec![
+        "aab".to_string(),
+        " ".to_string(),
+        "abcabcbb".to_string(),
+        "bbbbbb".to_string(),
+        "pwwkew".to_string(),
+    ];
 
-    // test 3
-    // expected: 3
-    //let s1 = "abcabcbb".to_string();
-    //let s2 = s1.clone();
+    for ( index, test ) in tests.iter().enumerate() {
 
-    // test 4
-    // expected: 1
-    //let s1 = " ".to_string();
-    //let s2 = s1.clone();
+        let my_time = Instant::now();
+        let my_result = my_length_of_longest_substring( test.to_string() );
+        println!("Test: {}, Result: {:?}, Time: {:?}", index, my_result, my_time.elapsed());
 
-    // test 5
-    // expected: 2
-    //let s1 = "aab".to_string();
-    //let s2 = s1.clone();
-
-    let my_time = Instant::now();
-    let my_result = my_length_of_longest_substring( s1 );
-    println!("Result: {:?}, Time: {:?}", my_result, my_time.elapsed());
-
-    let other_time = Instant::now();
-    let other_result = other_length_of_longest_substring( s2 );
-    println!("Result: {:?}, Time: {:?}", other_result, other_time.elapsed());
+        let other_time = Instant::now();
+        let other_result = other_length_of_longest_substring( test.to_string() );
+        println!("Test: {}, Result: {:?}, Time: {:?}", index, other_result, other_time.elapsed());
+    }
 }

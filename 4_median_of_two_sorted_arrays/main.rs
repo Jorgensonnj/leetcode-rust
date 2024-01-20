@@ -128,19 +128,19 @@ pub fn other_find_median_sorted_arrays(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 
 
 fn main() {
 
-    //let (vec1, vec2) = (vec![1,3], vec![2]);
-    //let vec3 = vec1.clone();
-    //let vec4 = vec2.clone();
+    let tests = vec![
+        (vec![1,2] , vec![3,4]),
+        (vec![1,3], vec![2]),
+    ];
 
-    let (vec1, vec2) = (vec![1,2] , vec![3,4]);
-    let vec3 = vec1.clone();
-    let vec4 = vec2.clone();
+    for ( index, test ) in tests.iter().enumerate() {
 
-    let my_time = Instant::now();
-    let my_result = my_find_median_sorted_arrays( vec1, vec2 );
-    println!("Result: {:?}, Time: {:?}", my_result, my_time.elapsed());
+        let my_time = Instant::now();
+        let my_result = my_find_median_sorted_arrays( test.0.clone() , test.1.clone() );
+        println!("Test: {}, Result: {:?}, Time: {:?}", index, my_result, my_time.elapsed());
 
-    let other_time = Instant::now();
-    let other_result = other_find_median_sorted_arrays( vec3, vec4 );
-    println!("Result: {:?}, Time: {:?}", other_result, other_time.elapsed());
+        let other_time = Instant::now();
+        let other_result = other_find_median_sorted_arrays( test.0.clone() , test.1.clone() );
+        println!("Test: {}, Result: {:?}, Time: {:?}", index, other_result, other_time.elapsed());
+    }
 }

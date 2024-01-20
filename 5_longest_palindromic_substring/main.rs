@@ -78,29 +78,23 @@ pub fn other_longest_palindrome(s: String) -> String {
 
 fn main() {
 
-    // test 1
-    let s1 = "1211111".to_string();
-    let s2 = s1.clone();
+    let tests = vec![
+        "1211111".to_string(),
+        "semjhjlritnjgapzrakcqahaqetwllrldktufvdgkfusniv".to_string(),
+        "a".to_string(),
+        "bb".to_string(),
+    ];
 
-    // test 2
-    //let s1 = "semjhjlritnjgapzrakcqahaqetwllrldktufvdgkfusniv".to_string();
-    //let s2 = s1.clone();
+    for ( index, test ) in tests.iter().enumerate() {
 
-    // test 3
-    //let s1 = "a".to_string();
-    //let s2 = s1.clone();
+        let my_time = Instant::now();
+        let my_result = my_longest_palindrome( test.clone() );
+        println!("Test: {}, Result: {:?}, Time: {:?}", index, my_result, my_time.elapsed());
 
-    // test 3
-    //let s1 = "bb".to_string();
-    //let s2 = s1.clone();
-
-    let my_time = Instant::now();
-    let my_result = my_longest_palindrome( s1 );
-    println!("Result: {:?}, Time: {:?}", my_result, my_time.elapsed());
-
-    let other_time = Instant::now();
-    let other_result = other_longest_palindrome( s2 );
-    println!("Result: {:?}, Time: {:?}", other_result, other_time.elapsed());
+        let other_time = Instant::now();
+        let other_result = other_longest_palindrome( test.clone() );
+        println!("Test: {}, Result: {:?}, Time: {:?}", index, other_result, other_time.elapsed());
+    }
 }
 
 // worked, but it was not fast enough

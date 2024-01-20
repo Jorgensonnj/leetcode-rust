@@ -99,7 +99,7 @@ fn main() {
         "+-12".to_string()
     ];
 
-    for (index, test ) in tests.iter().enumerate() {
+    for ( index, test ) in tests.iter().enumerate() {
 
         let my_time = Instant::now();
         let my_result = my_atoi( test.clone() );

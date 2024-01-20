@@ -42,11 +42,18 @@ pub fn other_two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
 
 fn main() {
 
-    let my_time = Instant::now();
-    let my_result = my_two_sum( vec![1,2,3,4,5], 9 );
-    println!("Result: {:?}, Time: {:?}", my_result, my_time.elapsed());
+    let tests = vec![
+        (vec![1,2,3,4,5], 9)
+    ];
 
-    let other_time = Instant::now();
-    let other_result = other_two_sum( vec![1,2,3,4,5], 9 );
-    println!("Result: {:?}, Time: {:?}", other_result, other_time.elapsed());
+    for ( index, test ) in tests.iter().enumerate() {
+
+        let my_time = Instant::now();
+        let my_result = my_two_sum( test.0.clone(), test.1 );
+        println!("Test: {}, Result: {:?}, Time: {:?}", index, my_result, my_time.elapsed());
+
+        let other_time = Instant::now();
+        let other_result = other_two_sum( test.0.clone(), test.1 );
+        println!("Test: {}, Result: {:?}, Time: {:?}", index, other_result, other_time.elapsed());
+    }
 }
