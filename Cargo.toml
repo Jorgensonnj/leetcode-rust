@@ -47,3 +47,11 @@ path = "08_string_to_integer_atoi/main.rs"
 [[bin]]
 name = "13_roman_to_integer"
 path = "13_roman_to_integer/main.rs"
+
+[[bin]]
+name = "88_merge_sorted_array"
+path = "88_merge_sorted_array/main.rs"
+
+[[bin]]
+name = "27_remove_element"
+path = "27_remove_element/main.rs"
