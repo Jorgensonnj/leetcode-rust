@@ -13,45 +13,49 @@ name = "directions"
 path = "src/main.rs"
 
 [[bin]]
-name = "01_two_sum"
-path = "01_two_sum/main.rs"
+name = "001_two_sum"
+path = "001_two_sum/main.rs"
 
 [[bin]]
-name = "02_add_two_numbers"
-path = "02_add_two_numbers/main.rs"
+name = "002_add_two_numbers"
+path = "002_add_two_numbers/main.rs"
 
 [[bin]]
-name = "03_longest_substring_without_repeating_characters"
-path = "03_longest_substring_without_repeating_characters/main.rs"
+name = "003_longest_substring_without_repeating_characters"
+path = "003_longest_substring_without_repeating_characters/main.rs"
 
 [[bin]]
-name = "04_median_of_two_sorted_arrays"
-path = "04_median_of_two_sorted_arrays/main.rs"
+name = "004_median_of_two_sorted_arrays"
+path = "004_median_of_two_sorted_arrays/main.rs"
 
 [[bin]]
-name = "05_longest_palindromic_substring"
-path = "05_longest_palindromic_substring/main.rs"
+name = "005_longest_palindromic_substring"
+path = "005_longest_palindromic_substring/main.rs"
 
 [[bin]]
-name = "06_zigzag_conversion"
-path = "06_zigzag_conversion/main.rs"
+name = "006_zigzag_conversion"
+path = "006_zigzag_conversion/main.rs"
 
 [[bin]]
-name = "07_reverse_integer"
-path = "07_reverse_integer/main.rs"
+name = "007_reverse_integer"
+path = "007_reverse_integer/main.rs"
 
 [[bin]]
-name = "08_string_to_integer_atoi"
-path = "08_string_to_integer_atoi/main.rs"
+name = "008_string_to_integer_atoi"
+path = "008_string_to_integer_atoi/main.rs"
 
 [[bin]]
-name = "13_roman_to_integer"
-path = "13_roman_to_integer/main.rs"
+name = "013_roman_to_integer"
+path = "013_roman_to_integer/main.rs"
 
 [[bin]]
-name = "88_merge_sorted_array"
-path = "88_merge_sorted_array/main.rs"
+name = "088_merge_sorted_array"
+path = "088_merge_sorted_array/main.rs"
 
 [[bin]]
-name = "27_remove_element"
-path = "27_remove_element/main.rs"
+name = "027_remove_element"
+path = "027_remove_element/main.rs"
+
+[[bin]]
+name = "200_number_of_islands"
+path = "200_number_of_islands/main.rs"
