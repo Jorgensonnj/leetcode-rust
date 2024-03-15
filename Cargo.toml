@@ -59,3 +59,15 @@ path = "027_remove_element/main.rs"
 [[bin]]
 name = "200_number_of_islands"
 path = "200_number_of_islands/main.rs"
+
+[[bin]]
+name = "121_best_time_to_buy_and_sell_stock"
+path = "121_best_time_to_buy_and_sell_stock/main.rs"
+
+[[bin]]
+name = "122_best_time_to_buy_and_sell_stock_ii"
+path = "122_best_time_to_buy_and_sell_stock_ii/main.rs"
+
+[[bin]]
+name = "202_happy_number"
+path = "202_happy_number/main.rs"
