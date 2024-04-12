@@ -66,11 +66,11 @@ fn main() {
 
 
     let tests = vec![
-        "aab".to_string(),
-        " ".to_string(),
-        "abcabcbb".to_string(),
-        "bbbbbb".to_string(),
-        "pwwkew".to_string(),
+        "aab",
+        " ",
+        "abcabcbb",
+        "bbbbbb",
+        "pwwkew",
     ];
 
     for ( index, test ) in tests.iter().enumerate() {
