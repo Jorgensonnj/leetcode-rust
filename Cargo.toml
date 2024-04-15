@@ -91,3 +91,7 @@ path = "189_rotate_array/main.rs"
 [[bin]]
 name = "026_remove_duplicates_from_sorted_array"
 path = "026_remove_duplicates_from_sorted_array/main.rs"
+
+[[bin]]
+name = "169_majority_element"
+path = "169_majority_element/main.rs"
