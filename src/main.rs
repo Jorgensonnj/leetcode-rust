@@ -7,6 +7,8 @@ In order to run a single binary you must run the below command.
 
 cargo run --bin <name_of_binary>
 
+test
+
 Avaliable binaries:
     - 001_two_sum
     - 002_add_two_numbers
